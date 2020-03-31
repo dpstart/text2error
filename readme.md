@@ -22,6 +22,10 @@
   <a href="https://github.com/PyCQA/pylint">
     <img src="https://img.shields.io/badge/linter-pylint-ce963f.svg" alt="Linter" />
   </a>
+  <!-- Types checker -->
+  <a href="https://github.com/PyCQA/pylint">
+    <img src="https://img.shields.io/badge/types%20checker-mypy-296db2.svg" alt="Types checker" />
+  </a>
   <!-- Test runner -->
   <a href="https://github.com/pytest-dev/pytest">
     <img src="https://img.shields.io/badge/test%20runner-pytest-449bd6.svg" alt="Test runner" />
