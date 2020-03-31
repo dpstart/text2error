@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "text2error"
+version = "0.0.0"
+description = "Introduce errors in error free text"
+authors = ["Simone Primarosa <simonepri@outlook.com>"]
+license = "MIT"
+homepage = "https://github.com/simonepri/text2error#readme"
+repository = "https://github.com/simonepri/text2error"
+readme = "readme.md"
+keywords = ["text", "error", "generation", "ged", "gec"]
+
+packages = [
+  {include = "text2error", from = "."},
+  {include = "tests", from = ".", format = "sdist"},
+]
+
+[tool.taskipy.tasks]
+lint = "python -m pylint text2error tests -v --output-format colorized --disable duplicate-code,bad-continuation"
+types = "python -m mypy text2error tests"
+format = "python -m black text2error tests"
+test = "python -m pytest tests --showlocals --cov=text2error --cov-report=term-missing:skip-covered"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+taskipy = "^1.2.0"
+black = "~19.10b0"
+pylint = "^2.4.4"
+mypy = "~0.770"
+pytest = "^5.4.1"
+pytest-cov = "^2.8.1"
+
+[build-system]
+requires = ["poetry >=1,<2"]
+build-backend = "poetry.masonry.api"
